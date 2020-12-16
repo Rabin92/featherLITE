@@ -62,7 +62,6 @@ const toggleMenuIcon = () => {
 // Delete Post
 const removePost = () => {
   const delNotes = document.querySelectorAll('.note__body');
-  console.log(delNotes.parentNode);
 
   delNotes.forEach(delNote => {
     delNote.addEventListener('click', e => {
