@@ -30,3 +30,11 @@
     background: #bfabc7;
   }
 }
+
+.btn {
+  background: #cc3300;
+  color: $white;
+  padding: em(5px);
+  border-radius: $brdr--radius;
+  float: right;
+}
