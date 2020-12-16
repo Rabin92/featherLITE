@@ -1,0 +1,41 @@
+// ==========================================================================
+// Header
+// ==========================================================================
+
+.flex-container {
+  @include flexy($j-content: space-between);
+
+  @media #{$break--s} {
+    @include flexy($j-content: initial, $a-items: null);
+  }
+}
+
+.header {
+  background: linear-gradient(to right, $secondary-color 320px, $primary-color);
+  padding: $gutters;
+
+  @media #{$break--s} {
+    padding: 0 0.45em;
+  }
+
+  @include e(logo) {
+    height: 35px;
+    fill: $white;
+  }
+
+  @include e(sitename) {
+    display: none;
+    font-weight: $font-weight--medium;
+
+    @media #{$break--s} {
+      padding-left: em(10px);
+      color: $white;
+      display: initial;
+      margin-right: auto;
+    }
+
+    @include m(bold) {
+      font-weight: $font-weight--bold;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+// ==========================================================================
+// Notes
+// ==========================================================================
+
+.note {
+  flex: 1;
+  padding-top: em(40px);
+
+  @include e(body) {
+    background: $whitesmoke;
+    padding: $gutters;
+    border-radius: $brdr--radius;
+    margin-bottom: 30px;
+  }
+
+  @include e(title) {
+    margin: 0 0 10px;
+  }
+
+  @include e(header) {
+    @include flexy();
+    padding: $gutters;
+  }
+
+  @include e(dot) {
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    margin-right: 12px;
+    background: #bfabc7;
+  }
+}

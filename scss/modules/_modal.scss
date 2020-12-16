@@ -1,0 +1,117 @@
+// ==========================================================================
+// Modal
+// ==========================================================================
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $overlay-bckcol;
+  @include flexy($dsp: null, $j-content: center);
+
+  @include m(hidden) {
+    display: none;
+  }
+}
+
+.modal {
+  width: 90%;
+  padding: $gutters;
+  background: $white;
+  border-radius: $brdr--radius;
+
+  @media #{$break--s} {
+    max-width: 500px;
+  }
+
+  @include e(close) {
+    @include flexy($a-items: null, $j-content: flex-end);
+  }
+
+  @include e(closebtn) {
+    border-radius: $brdr--radius;
+    font-weight: bold;
+    color: $white;
+    background: $darkgray;
+  }
+
+  @include e(heading) {
+    text-align: $text--center;
+  }
+
+  @include e(label) {
+    background: $whitesmoke;
+    padding: 0.45em;
+    border-radius: $brdr--radius;
+
+    @include flexy();
+  }
+
+  @include e(input) {
+    @extend %form;
+    background: $whitesmoke;
+  }
+
+  @include e(textarea) {
+    @extend %form;
+    background: $whitesmoke;
+
+    @media #{$break--m} {
+      height: 100px;
+    }
+  }
+
+  @include e(wrap) {
+    margin: em(15px) 0;
+  }
+
+  @include e(btn) {
+    border-radius: $brdr--radius;
+    padding: 0.55em;
+    background: $careysPink;
+    color: $white;
+    font-weight: bold;
+    width: 100px;
+    margin-right: 20px;
+  }
+}
+
+.label {
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+
+  @media #{$break--xs} {
+    padding: 0.53em;
+  }
+
+  @media #{$break--s} {
+    height: 15px;
+    width: 15px;
+    padding: 0.62em;
+  }
+  margin-left: 5px;
+}
+
+#js-error {
+  color: $white;
+  font-size: em(20px);
+  font-weight: 500;
+  text-align: $text--center;
+  background: #ff0000;
+  margin: em(20px) 0;
+  padding: 0.25em;
+  border-radius: $brdr--radius;
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

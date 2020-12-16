@@ -1,0 +1,27 @@
+// ==========================================================================
+// Functions
+// ==========================================================================
+
+// Import if primary Google Fonts URL is defined
+
+@if variable-exists(font-url--primary) {
+  @import url($font-url--primary);
+}
+
+// Import if secondary Google Fonts URL is defined
+@if variable-exists(font-url--secondary) {
+  @import url($font-url--secondary);
+}
+
+// Calculate em values
+
+@function em($target, $context: $base__font-size) {
+  @return ($target / $context) * 1em;
+}
+
+// Loop through each color
+@each $name, $color in $colors {
+  .#{$name} {
+    background: $color;
+  }
+}

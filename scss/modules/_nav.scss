@@ -1,0 +1,90 @@
+// ==========================================================================
+// Nav
+// ==========================================================================
+
+.nav {
+  color: $white;
+  text-align: $text--center;
+  background: $overlay-bckcol;
+  position: fixed;
+  z-index: 1000;
+  top: 67px;
+  right: 0;
+  left: 0;
+  height: 0;
+
+  @include e(items) {
+    background: $abbey;
+    padding: $gutters;
+  }
+
+  @include e(list) {
+    padding: em(5px);
+    margin: em(10px);
+    cursor: $cursor;
+    border-radius: $brdr--radius;
+    background: $darkgray;
+
+    @include m(icon) {
+      @include flexy($j-content: center);
+    }
+  }
+
+  @include e(signout) {
+    height: em(20px);
+    fill: $white;
+    padding-left: em(10px);
+  }
+}
+
+.nav-lrg {
+  display: none;
+
+  @media #{$break--s} {
+    display: initial;
+    color: $white;
+
+    @include e(list) {
+      display: inline-block;
+      padding-left: 10px;
+      text-transform: uppercase;
+      cursor: $cursor;
+
+      @include m(center) {
+        vertical-align: middle;
+      }
+
+      @include m(color) {
+        font-weight: $font-weight--bold;
+      }
+    }
+
+    @include e(signout) {
+      height: em(20px);
+      fill: $white;
+    }
+  }
+}
+
+// Nav Animations
+@keyframes navSlideDown {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  100% {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes navSlideUp {
+  0% {
+    height: 100%;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}

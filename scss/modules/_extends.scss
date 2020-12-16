@@ -1,0 +1,19 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+%form {
+  width: 100%;
+  border: 1px solid $input-color;
+  border-radius: $brdr--radius;
+}
+
+%menu {
+  border: 2px solid $white;
+  border-radius: $brdr--radius;
+  transition: all 0.4s ease-in-out;
+}
+
+%menu-active {
+  transition: all 0.5s ease-in-out;
+}

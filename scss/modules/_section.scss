@@ -1,0 +1,96 @@
+// ==========================================================================
+// Section
+// ==========================================================================
+
+.section {
+  padding: $gutters;
+
+  @media #{$break--s} {
+    padding: 50px $gutters 0;
+  }
+}
+
+.site_name {
+  margin: 0;
+  padding-bottom: 10px;
+  @media #{$break--s} {
+    display: none;
+  }
+}
+
+.flex-wrap {
+  @media #{$break--s} {
+    @include flexy($j-content: space-between, $a-items: null);
+  }
+}
+
+.form {
+  @include flexy($f-dir: column, $a-items: null);
+
+  @media #{$break--s} {
+    width: 40%;
+  }
+
+  @include e(input) {
+    height: em(50px);
+    border: 1px solid $input-color;
+    border-radius: $brdr--radius;
+    padding-left: em(10px);
+    &::placeholder {
+      font-size: em(20px);
+    }
+  }
+
+  @include e(span) {
+    padding-top: em(5px);
+  }
+
+  @include e(arrow) {
+    @include flexy($dsp: null, $a-items: null, $a-self: flex-end);
+    position: absolute;
+    height: em(50px);
+    width: em(65px);
+    cursor: $cursor;
+    border-top-right-radius: $brdr--radius;
+    border-bottom-right-radius: $brdr--radius;
+
+    @include m(color) {
+      background: $secondary-color;
+    }
+  }
+}
+
+.create {
+  height: em(50px);
+  border-radius: $brdr--radius;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+  @media #{$break--s} {
+    box-shadow: initial;
+    border: 1px solid $abbey;
+  }
+
+  @include flexy($j-content: space-between);
+
+  @media #{$break--s} {
+    margin-top: initial;
+    width: 40%;
+  }
+  margin-top: 20px;
+
+  @include e(title) {
+    font-size: em(18px);
+    padding-left: 0.55em;
+  }
+
+  @include e(plus) {
+    height: em(28px);
+    padding-right: em(10px);
+    cursor: $cursor;
+
+    @include m(color) {
+      fill: $secondary-color;
+    }
+  }
+}

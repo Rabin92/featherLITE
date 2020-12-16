@@ -1,0 +1,45 @@
+// ==========================================================================
+// Menu
+// ==========================================================================
+
+.header {
+  @include e(menu-icon) {
+    cursor: $cursor;
+
+    @media #{$break--s} {
+      display: none;
+    }
+  }
+
+  @include e(first-line) {
+    @extend %menu;
+    width: 42px;
+    margin-bottom: 0.4em;
+  }
+
+  @include e(middle-line) {
+    @extend %menu;
+    margin-bottom: 0.4em;
+    width: 20px;
+  }
+
+  @include e(third-line) {
+    @extend %menu;
+    width: 42px;
+  }
+}
+
+// Animating menu icon on the click
+.active .header__first-line {
+  @extend %menu-active;
+  transform: rotate(45deg) translate(1px, 15px);
+}
+.active .header__middle-line {
+  transform: translateX(20px);
+  width: 42px;
+  opacity: 0;
+}
+.active .header__third-line {
+  @extend %menu-active;
+  transform: rotate(-45deg) translate(-1px, -15px);
+}

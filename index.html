@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- /Animate  plugin -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>featherLITE</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="flex-container wrap">
+        <div class="header__menu-icon" id="js-menuIcon">
+          <div class="header__first-line"></div>
+          <div class="header__middle-line"></div>
+          <div class="header__third-line"></div>
+        </div>
+        <!-- /menu -->
+
+        <svg
+          class="header__logo"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <path
+            d="M512 0C460.22 3.56 96.44 38.2 71.01 287.61c-3.09 26.66-4.84 53.44-5.99 80.24l178.87-178.69c6.25-6.25 16.4-6.25 22.65 0s6.25 16.38 0 22.63L7.04 471.03c-9.38 9.37-9.38 24.57 0 33.94 9.38 9.37 24.59 9.37 33.98 0l57.13-57.07c42.09-.14 84.15-2.53 125.96-7.36 53.48-5.44 97.02-26.47 132.58-56.54H255.74l146.79-48.88c11.25-14.89 21.37-30.71 30.45-47.12h-81.14l106.54-53.21C500.29 132.86 510.19 26.26 512 0z"
+          ></path>
+        </svg>
+        <h2 class="header__sitename">
+          Feather<span class="header__sitename--bold">LITE</span>
+        </h2>
+        <!-- /logo -->
+
+        <nav class="nav-lrg">
+          <ul class="nav-lrg__items">
+            <li class="nav-lrg__list">About |</li>
+            <li class="nav-lrg__list">
+              Get <span class="nav-lrg__list--color">FeatherPro</span> |
+            </li>
+            <li class="nav-lrg__list nav-lrg__list--center">
+              <svg
+                class="nav-lrg__signout"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"
+                />
+              </svg>
+              <!-- /sign-out-icon -->
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <nav class="nav" id="js-nav">
+      <ul class="nav__items" id="js-navLists">
+        <li class="nav__list">About FeatherLITE</li>
+        <li class="nav__list">Get more with FeatherPRO</li>
+        <li class="nav__list nav__list--icon">
+          Sign Out
+          <svg
+            class="nav__signout"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M497 273L329 441c-15 15-41 4.5-41-17v-96H152c-13.3 0-24-10.7-24-24v-96c0-13.3 10.7-24 24-24h136V88c0-21.4 25.9-32 41-17l168 168c9.3 9.4 9.3 24.6 0 34zM192 436v-40c0-6.6-5.4-12-12-12H96c-17.7 0-32-14.3-32-32V160c0-17.7 14.3-32 32-32h84c6.6 0 12-5.4 12-12V76c0-6.6-5.4-12-12-12H96c-53 0-96 43-96 96v192c0 53 43 96 96 96h84c6.6 0 12-5.4 12-12z"
+            />
+          </svg>
+          <!-- /sign-out-icon -->
+        </li>
+      </ul>
+    </nav>
+
+    <section class="section" id="js-section">
+      <div class="wrap flex-wrap">
+        <h1 class="site_name">Feather<span>LITE</span></h1>
+
+        <form class="form" action="#">
+          <label class="form__label srt" for="input-search">Search</label>
+          <input
+            class="form__input"
+            type="text"
+            placeholder="Search..."
+            id="input-search"
+          />
+          <span class="form__span">Search through your notes</span>
+
+          <svg
+            class="form__arrow form__arrow--color"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512"
+          >
+            <path
+              fill="none"
+              stroke="white"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="48"
+              d="M268 112l144 144-144 144M392 256H100"
+            />
+          </svg>
+          <!-- /arrow-right -->
+        </form>
+
+        <div class="create">
+          <p class="create__title">Create a new note</p>
+
+          <svg
+            class="create__plus create__plus--color"
+            id="js-addnote"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"
+            ></path>
+          </svg>
+          <!-- /plus-solid -->
+        </div>
+      </div>
+    </section>
+
+    <section class="note">
+      <div class="wrap">
+        <div class="note__wrap">
+          <div class="note__header">
+            <div class="note__dot"></div>
+            <span class="note__date">June 19, 2018</span>
+          </div>
+
+          <div class="note__body">
+            <h1 class="note__title">HTML</h1>
+            <p class="note__content">
+              First developed by Tim Berners-Lee in 1990, HTML is short for
+              Hypertext Markup Language. HTML is used to create electronic
+              documents (called pages) that are displayed on the World Wide Web.
+              Each page contains a series of connections to other pages called
+              hyperlinks. Every web page you see on the Internet is written
+              using one version of HTML code or another.
+            </p>
+          </div>
+        </div>
+
+        <div class="note__wrap">
+          <div class="note__header">
+            <div class="note__dot"></div>
+            <span class="note__date">March 19, 2012</span>
+          </div>
+
+          <div class="note__body">
+            <h1 class="note__title">CSS</h1>
+            <p class="note__content">
+              Short for cascading style sheets, CSS is a language used to
+              describe reusable styles for presenting documents written in a
+              markup language. Its concept was originated by Håkon Wium Lie in
+              1994. In December 1996, CSS was made a specification by the W3C
+              and today allows web developers to alter the layout and appearance
+              of their web pages. For example, CSS may be used to change the
+              font used in certain HTML element, and its size and color.
+            </p>
+          </div>
+        </div>
+
+        <div class="note__wrap">
+          <div class="note__header">
+            <div class="note__dot"></div>
+            <span class="note__date">Sep 10, 2010</span>
+          </div>
+
+          <div class="note__body">
+            <h1 class="note__title">JS</h1>
+            <p class="note__content">
+              JavaScript is a text-based programming language used both on the
+              client-side and server-side that allows you to make web pages
+              interactive. Where HTML and CSS are languages that give structure
+              and style to web pages, JavaScript gives web pages interactive
+              elements that engage a user. Common examples of JavaScript that
+              you might use every day include the search box on Amazon, a news
+              recap video embedded on The New York Times, or refreshing your
+              Twitter feed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /note -->
+
+    <div class="overlay overlay--hidden" id="js-overlay">
+      <div class="modal animate__animated animate__fadeInUpBig">
+        <div class="modal__close">
+          <button class="modal__closebtn" id="js-closebtn" type="button">
+            &#10005;
+          </button>
+        </div>
+
+        <div class="modal__content">
+          <h2 class="modal__heading">Create a new note</h2>
+          <div class="modal__label">
+            <div class="color-1 label"></div>
+            <div class="color-2 label"></div>
+            <div class="color-3 label"></div>
+            <div class="color-4 label"></div>
+            <div class="color-5 label"></div>
+            <div class="color-6 label"></div>
+            <div class="color-7 label"></div>
+            <div class="color-8 label"></div>
+            <div class="color-9 label"></div>
+            <div class="color-10 label"></div>
+            <div class="color-11 label"></div>
+            <div class="color-12 label"></div>
+            <div class="color-13 label"></div>
+            <div class="color-14 label"></div>
+            <div class="color-15 label"></div>
+            <div class="color-16 label"></div>
+            <div class="color-17 label"></div>
+            <div class="color-18 label"></div>
+          </div>
+
+          <form class="modal__form" action="#">
+            <div class="modal__wrap">
+              <div class="error"></div>
+              <label for="input-title">Give your note a title</label>
+              <input class="modal__input" type="text" id="input-title" />
+            </div>
+
+            <div class="modal__wrap">
+              <label for="textarea">Write down your note</label>
+              <textarea class="modal__textarea" id="textarea"></textarea>
+            </div>
+
+            <button class="modal__btn" id="js-post-btn" type="button">
+              Post note
+            </button>
+            <button class="modal__btn" type="reset">Clear</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /Modal -->
+
+    <footer class="footer">
+      <p class="footer__copyright">
+        &copy; Copyright 2020. All rights reserved.
+      </p>
+    </footer>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+    <!-- /JS -->
+  </body>
+</html>

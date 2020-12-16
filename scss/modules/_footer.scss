@@ -1,0 +1,11 @@
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+.footer {
+  height: 80px;
+  background: linear-gradient(to left, $secondary-color 320px, $primary-color);
+  color: $white;
+  padding: $gutters;
+  @include flexy($j-content: center);
+}
