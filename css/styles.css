@@ -421,14 +421,6 @@ button {
   font-weight: 700;
 }
 
-.btn {
-  background: #cc3300;
-  color: #fff;
-  padding: 0.3125em;
-  border-radius: 5px;
-  float: right;
-}
-
 .header__menu-icon {
   cursor: pointer;
 }
@@ -646,6 +638,11 @@ button {
   border-radius: 5px;
   margin-bottom: 30px;
 }
+@media (min-width: 600px) {
+  .note__body {
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  }
+}
 .note__title {
   margin: 0 0 10px;
 }
@@ -660,6 +657,18 @@ button {
   width: 12px;
   margin-right: 12px;
   background: #bfabc7;
+}
+
+.btn {
+  background: #cc3300;
+  color: #fff;
+  padding: 0.3125em;
+  border-radius: 5px;
+  float: right;
+}
+.btn:hover {
+  background: #e63900;
+  transition: all 0.5ms ease-in-out;
 }
 
 .overlay {
@@ -775,6 +784,7 @@ button {
   background: linear-gradient(to left, #c0abc7 320px, #d8a3b2);
   color: #fff;
   padding: 1em;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
