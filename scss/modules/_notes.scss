@@ -11,6 +11,10 @@
     padding: $gutters;
     border-radius: $brdr--radius;
     margin-bottom: 30px;
+
+    @media #{$break--s} {
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+    }
   }
 
   @include e(title) {
@@ -32,9 +36,14 @@
 }
 
 .btn {
-  background: #cc3300;
+  background: $delete-btn;
   color: $white;
   padding: em(5px);
   border-radius: $brdr--radius;
   float: right;
+
+  &:hover {
+    background: lighten($delete-btn, 5%);
+    transition: all 0.5ms ease-in-out;
+  }
 }
