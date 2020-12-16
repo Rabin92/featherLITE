@@ -421,6 +421,14 @@ button {
   font-weight: 700;
 }
 
+.btn {
+  background: #cc3300;
+  color: #fff;
+  padding: 0.3125em;
+  border-radius: 5px;
+  float: right;
+}
+
 .header__menu-icon {
   cursor: pointer;
 }
