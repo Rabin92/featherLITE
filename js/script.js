@@ -59,6 +59,23 @@ const toggleMenuIcon = () => {
   }
 };
 
+// Delete Post
+const removePost = () => {
+  const delNotes = document.querySelectorAll('.note__body');
+  console.log(delNotes.parentNode);
+
+  delNotes.forEach(delNote => {
+    delNote.addEventListener('click', e => {
+      const theTarget = e.target;
+      if (theTarget.tagName === 'BUTTON') {
+        delNote.parentNode.remove();
+      }
+    });
+  });
+};
+
+removePost();
+
 // Create a date object for note
 const monthNames = [
   'Jan',
@@ -96,23 +113,26 @@ dotColors.forEach(dotColor => {
 
 // Add this to page when user post notes
 const createNewNote = () => {
-  const inputText = document.querySelector('#input-title').value;
-  const textArea = document.querySelector('#textarea').value;
+  let inputText = document.querySelector('#input-title');
+  let textArea = document.querySelector('#textarea');
   const noteSec = document.querySelector('.note');
   const error = document.querySelector('.error');
 
-  if (inputText === '' || textArea === '') {
-    error.innerHTML = '<p id="js-error">Required</p>';
+  if (inputText.value === '' || textArea.value === '') {
+    error.innerHTML = '<p id="js-error">Both fields required</p>';
   } else {
+    error.innerHTML = '';
+
     // Create a new element
-    const divWrap = document.createElement('DIV');
-    const noteWrap = document.createElement('DIV');
-    const noteHeader = document.createElement('DIV');
-    const noteDot = document.createElement('DIV');
-    const noteBody = document.createElement('DIV');
-    const span = document.createElement('SPAN');
-    const header = document.createElement('H1');
-    const content = document.createElement('P');
+    let divWrap = document.createElement('div');
+    let noteWrap = document.createElement('div');
+    let noteHeader = document.createElement('div');
+    let noteDot = document.createElement('div');
+    let noteBody = document.createElement('div');
+    let delBtn = document.createElement('button');
+    let span = document.createElement('span');
+    let header = document.createElement('h1');
+    let content = document.createElement('p');
 
     // Set its attributes
     addClass(divWrap, 'wrap');
@@ -120,6 +140,8 @@ const createNewNote = () => {
     addClass(noteHeader, 'note__header');
     addClass(noteDot, 'note__dot');
     addClass(noteBody, 'note__body');
+    addClass(delBtn, 'btn');
+    delBtn.setAttribute('type', 'button');
     addClass(span, 'note__date');
     addClass(header, 'note__title');
     addClass(content, 'note__content');
@@ -127,18 +149,26 @@ const createNewNote = () => {
 
     // Create a new text node
     span.textContent = noteDate;
-    header.textContent = inputText;
-    content.textContent = textArea;
+    header.textContent = inputText.value;
+    content.textContent = textArea.value;
+    delBtn.textContent = 'Delete Post';
+
+    inputText.value = '';
+    textArea.value = '';
 
     // Append
     noteSec.insertBefore(divWrap, noteSec.firstElementChild);
     appendEl(divWrap, noteWrap);
     appendEl(noteWrap, noteHeader);
-    appendEl(noteWrap, noteBody);
     appendEl(noteHeader, noteDot);
     appendEl(noteHeader, span);
+    appendEl(noteWrap, noteBody);
+    appendEl(noteBody, delBtn);
     appendEl(noteBody, header);
     appendEl(noteBody, content);
+
+    // Remove button
+    delBtn = removePost();
 
     modalClose();
   }
