@@ -7,5 +7,6 @@
   background: linear-gradient(to left, $secondary-color 320px, $primary-color);
   color: $white;
   padding: $gutters;
+  margin-top: 70px;
   @include flexy($j-content: center);
 }
