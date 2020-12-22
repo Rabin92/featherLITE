@@ -66,8 +66,8 @@ const removePost = () => {
   delNotes.forEach(delNote => {
     delNote.addEventListener('click', e => {
       const theTarget = e.target;
-      if (theTarget.tagName === 'BUTTON') {
-        delNote.parentNode.remove();
+      if (theTarget.tagName === 'IMG') {
+        theTarget.parentNode.parentNode.remove();
       }
     });
   });
@@ -128,7 +128,8 @@ const createNewNote = () => {
     let noteHeader = document.createElement('div');
     let noteDot = document.createElement('div');
     let noteBody = document.createElement('div');
-    let delBtn = document.createElement('button');
+    let delBtn = document.createElement('img');
+
     let span = document.createElement('span');
     let header = document.createElement('h1');
     let content = document.createElement('p');
@@ -139,8 +140,8 @@ const createNewNote = () => {
     addClass(noteHeader, 'note__header');
     addClass(noteDot, 'note__dot');
     addClass(noteBody, 'note__body');
-    addClass(delBtn, 'btn');
-    delBtn.setAttribute('type', 'button');
+    addClass(delBtn, 'delete__icon');
+
     addClass(span, 'note__date');
     addClass(header, 'note__title');
     addClass(content, 'note__content');
@@ -150,7 +151,8 @@ const createNewNote = () => {
     span.textContent = noteDate;
     header.textContent = inputText.value;
     content.textContent = textArea.value;
-    delBtn.textContent = 'Delete Post';
+    delBtn.src = 'icons/delete.svg';
+    delBtn.alt = 'delete icon';
 
     inputText.value = '';
     textArea.value = '';
