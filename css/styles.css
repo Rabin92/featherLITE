@@ -659,16 +659,10 @@ button {
   background: #bfabc7;
 }
 
-.btn {
-  background: #cc3300;
-  color: #fff;
-  padding: 0.3125em;
-  border-radius: 5px;
+.delete__icon {
+  height: 20px;
+  cursor: pointer;
   float: right;
-}
-.btn:hover {
-  background: #e63900;
-  transition: all 0.5ms ease-in-out;
 }
 
 .overlay {
