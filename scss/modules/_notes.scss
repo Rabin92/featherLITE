@@ -35,15 +35,8 @@
   }
 }
 
-.btn {
-  background: $delete-btn;
-  color: $white;
-  padding: em(5px);
-  border-radius: $brdr--radius;
+.delete__icon {
+  height: 20px;
+  cursor: $cursor;
   float: right;
-
-  &:hover {
-    background: lighten($delete-btn, 5%);
-    transition: all 0.5ms ease-in-out;
-  }
 }
