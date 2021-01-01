@@ -98,6 +98,10 @@ const year = today.getFullYear();
 
 const noteDate = `${month} ${date}, ${year}`;
 
+// Footer Year
+const setYear = document.querySelector('.setYear');
+setYear.innerHTML = year;
+
 // Generate a random colour
 const dotColors = document.querySelectorAll('.note__dot');
 
