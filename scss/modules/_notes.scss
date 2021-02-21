@@ -6,6 +6,10 @@
   flex: 1;
   padding-top: em(40px);
 
+  @include e(wrap) {
+    animation: fade 1s ease-in-out forwards;
+  }
+
   @include e(body) {
     background: $whitesmoke;
     padding: $gutters;
@@ -39,4 +43,15 @@
   height: 20px;
   cursor: $cursor;
   float: right;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
